@@ -281,7 +281,10 @@ def manager_menu(man_obj):
 
     if user_input == '7':
         act_input = input('''
+       *** ACTIVATION / DEACTIVATION MENU ***
+
         Please select an option to change:
+
         1: User
         2: Competency
         3: Assessment
