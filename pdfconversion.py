@@ -1,18 +1,25 @@
-import pandas as pd
-import pdfkit
-  
-# SAVE CSV TO HTML USING PANDAS
-csv_file = 'user_competency.csv'
-html_file = csv_file[:-3]+'html'
-  
-df = pd.read_csv(csv_file, sep=',')
-df.to_html(html_file)
-  
-# INSTALL wkhtmltopdf AND SET PATH IN CONFIGURATION
-# These two Steps could be eliminated By Installing wkhtmltopdf -
-# - and setting it's path to Environment Variables
-path_wkhtmltopdf = r'D:\Softwares\wkhtmltopdf\bin\wkhtmltopdf.exe'
-config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-  
-# CONVERT HTML FILE TO PDF WITH PDFKIT
-pdfkit.from_file("user_competency.html", "UserCompt.pdf", configuration=config)
+import csv
+from fpdf import FPDF
+
+# Read CSV data into a list
+data = []
+with open('user_competency.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        data.append(row)
+
+# Create PDF object
+pdf = FPDF()
+pdf.add_page(orientation='L')
+
+# Set font and font size
+pdf.set_font("Arial", size=8)
+
+# Add table to PDF
+for row in data:
+    for item in row:
+        pdf.cell(50, 10, str(item), align= 'C',border=.25)
+    pdf.ln()
+
+# Save PDF
+pdf.output("output.pdf")
