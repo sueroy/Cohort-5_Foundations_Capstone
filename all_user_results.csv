@@ -1,7 +1,7 @@
 Competency,Competency ID,User ID,First Name,Last Name,Average Score,Assessment Name,Assessment ID,Date Taken
 Computer Anatomy,1,1,Carmine,Voisey,3.0,33,1,2022-08-03
 Computer Anatomy,1,2,Marten,Dreossi,2.0,33,1,2022-05-22
-Computer Anatomy,1,3,Brig,Chadwick,1.5,33,1,2023-01-22
+Computer Anatomy,1,3,Brig,Chad,1.5,33,1,2023-01-22
 Computer Anatomy,1,6,Babb,Blaske,1.0,33,1,2023-02-04
 Computer Anatomy,1,7,Kaspar,Elby,0.0,33,1,2022-12-11
 Computer Anatomy,1,8,Neilla,Waine,1.0,verbal test,3,2022-09-20
@@ -13,18 +13,20 @@ Computer Anatomy,1,13,Jolie,Drillot,2.0,33,1,2022-05-29
 Computer Anatomy,1,14,Janith,Ashfull,3.0,33,1,2023-04-07
 Computer Anatomy,1,15,Don,Bulloch,3.0,verbal test,3,2022-09-19
 Computer Anatomy,1,16,Murielle,Balchen,4.0,33,1,2022-08-08
-Computer Anatomy,1,17,Daisi,Klimshuk,4.0,33,1,2023-01-23
 Computer Anatomy,1,18,Corney,Romanetti,2.0,33,1,2022-11-22
 Computer Anatomy,1,19,Robinetta,Easdon,2.0,33,1,2022-08-03
+Computer Anatomy,1,21,Ammon,Roy,2.0,verbal test,3,2023-01-10
+Computer Anatomy,1,22,Sarah,Wonky,4.0,verbal test,3,2022-11-20
+Computer Anatomy,1,23,John,Ipson,0.0,33,1,2022-06-05
 Data Types,2,1,Carmine,Voisey,1.5,verbal test,4,2022-06-15
 Data Types,2,2,Marten,Dreossi,3.0,verbal test,4,2023-02-27
 Data Types,2,4,Arluene,Lande,1.0,verbal test,4,2022-07-05
-Data Types,2,5,Susan,Roy,1.5,verbal test,4,2022-05-27
+Data Types,2,5,Susan,Roy,1.75,verbal test,4,2022-05-27
 Data Types,2,7,Kaspar,Elby,2.0,written test,2,2022-12-10
 Data Types,2,8,Neilla,Waine,2.0,written test,2,2023-01-23
 Data Types,2,9,Lonnie,Cesconi,1.6666666666666667,written test,2,2023-01-19
 Data Types,2,10,Mariya,Domnick,1.6666666666666667,verbal test,4,2022-06-06
-Data Types,2,12,Oran,Ferguson,3.5,verbal test,4,2022-12-28
+Data Types,2,12,Oran,Ferguson,3.6666666666666665,verbal test,4,2022-09-30
 Data Types,2,13,Jolie,Drillot,2.0,verbal test,4,2022-06-04
 Data Types,2,15,Don,Bulloch,2.3333333333333335,verbal test,4,2022-11-11
 Data Types,2,16,Murielle,Balchen,3.0,verbal test,4,2022-07-06
@@ -32,7 +34,8 @@ Data Types,2,17,Daisi,Klimshuk,3.5,verbal test,4,2022-07-14
 Data Types,2,18,Corney,Romanetti,1.3333333333333333,verbal test,4,2022-08-15
 Data Types,2,19,Robinetta,Easdon,3.0,written test,2,2023-03-23
 Data Types,2,20,Rockwell,Chipps,0.0,written test,2,2022-10-15
-Variables,3,3,Brig,Chadwick,3.0,written test,5,2022-07-17
+Data Types,2,23,John,Ipson,3.0,written test,2,2022-08-14
+Variables,3,3,Brig,Chad,3.0,written test,5,2022-07-17
 Variables,3,4,Arluene,Lande,2.0,verbal test,7,2022-04-24
 Variables,3,5,Susan,Roy,3.0,verbal test,7,2022-08-31
 Variables,3,6,Babb,Blaske,1.5,verbal test,7,2023-04-07
@@ -48,7 +51,7 @@ Variables,3,19,Robinetta,Easdon,0.0,verbal test,7,2022-11-05
 Variables,3,20,Rockwell,Chipps,2.5,written test,5,2022-10-31
 Functions,4,1,Carmine,Voisey,0.0,written test,6,2023-02-02
 Functions,4,2,Marten,Dreossi,2.0,verbal test,8,2022-11-29
-Functions,4,3,Brig,Chadwick,4.0,verbal test,8,2023-03-30
+Functions,4,3,Brig,Chad,4.0,verbal test,8,2023-03-30
 Functions,4,4,Arluene,Lande,2.0,verbal test,8,2023-04-02
 Functions,4,5,Susan,Roy,3.0,verbal test,8,2023-04-12
 Functions,4,6,Babb,Blaske,1.5,verbal test,8,2022-12-28
@@ -65,8 +68,10 @@ Functions,4,17,Daisi,Klimshuk,4.0,verbal test,8,2022-12-09
 Functions,4,18,Corney,Romanetti,2.5,verbal test,8,2022-10-14
 Functions,4,19,Robinetta,Easdon,2.5,written test,6,2022-06-09
 Functions,4,20,Rockwell,Chipps,1.0,verbal test,8,2022-04-25
+Functions,4,22,Sarah,Wonky,2.3333333333333335,verbal test,8,2022-11-30
+Functions,4,23,John,Ipson,4.0,verbal test,8,2022-06-14
 Boolean Logic,5,2,Marten,Dreossi,3.0,verbal test,14,2022-10-16
-Boolean Logic,5,3,Brig,Chadwick,2.5,written test,9,2023-02-26
+Boolean Logic,5,3,Brig,Chad,2.5,written test,9,2023-02-26
 Boolean Logic,5,4,Arluene,Lande,3.6666666666666665,verbal test,14,2022-05-31
 Boolean Logic,5,5,Susan,Roy,2.0,verbal test,14,2022-08-02
 Boolean Logic,5,6,Babb,Blaske,0.0,verbal test,14,2023-03-04
@@ -79,9 +84,10 @@ Boolean Logic,5,13,Jolie,Drillot,2.0,verbal test,14,2022-06-16
 Boolean Logic,5,14,Janith,Ashfull,0.5,verbal test,14,2022-06-07
 Boolean Logic,5,16,Murielle,Balchen,0.0,written test,9,2022-11-17
 Boolean Logic,5,20,Rockwell,Chipps,1.5,verbal test,14,2023-03-04
+Boolean Logic,5,21,Ammon,Roy,4.0,verbal test,14,2023-03-03
 Conditionals,6,1,Carmine,Voisey,1.0,verbal test,15,2022-04-17
 Conditionals,6,2,Marten,Dreossi,3.0,verbal test,15,2022-08-07
-Conditionals,6,3,Brig,Chadwick,3.0,verbal test,15,2022-10-12
+Conditionals,6,3,Brig,Chad,3.0,verbal test,15,2022-10-12
 Conditionals,6,4,Arluene,Lande,2.0,written test,10,2023-02-17
 Conditionals,6,8,Neilla,Waine,4.0,written test,10,2022-08-19
 Conditionals,6,9,Lonnie,Cesconi,0.0,verbal test,15,2022-08-09
@@ -93,6 +99,7 @@ Conditionals,6,16,Murielle,Balchen,1.5,verbal test,15,2022-12-24
 Conditionals,6,17,Daisi,Klimshuk,1.0,written test,10,2022-11-09
 Conditionals,6,18,Corney,Romanetti,2.5,verbal test,15,2022-12-26
 Conditionals,6,20,Rockwell,Chipps,1.0,verbal test,15,2022-09-10
+Conditionals,6,22,Sarah,Wonky,3.0,written test,10,2022-08-24
 Loops (For and While),7,1,Carmine,Voisey,3.0,verbal test,16,2022-12-16
 Loops (For and While),7,2,Marten,Dreossi,3.5,verbal test,16,2022-04-28
 Loops (For and While),7,4,Arluene,Lande,1.0,written test,11,2023-02-03
@@ -108,6 +115,8 @@ Loops (For and While),7,16,Murielle,Balchen,2.0,verbal test,16,2023-03-13
 Loops (For and While),7,17,Daisi,Klimshuk,3.0,written test,11,2022-12-11
 Loops (For and While),7,18,Corney,Romanetti,0.5,verbal test,16,2022-06-14
 Loops (For and While),7,19,Robinetta,Easdon,2.0,written test,11,2022-06-16
+Loops (For and While),7,22,Sarah,Wonky,3.0,verbal test,16,2022-12-30
+Loops (For and While),7,23,John,Ipson,3.0,written test,11,2023-03-13
 Data Structures,8,1,Carmine,Voisey,1.0,verbal test,18,2022-12-05
 Data Structures,8,2,Marten,Dreossi,1.0,verbal test,18,2022-08-31
 Data Structures,8,4,Arluene,Lande,2.0,verbal test,18,2022-10-07
@@ -124,24 +133,26 @@ Data Structures,8,16,Murielle,Balchen,0.0,verbal test,18,2022-12-04
 Data Structures,8,18,Corney,Romanetti,1.6666666666666667,verbal test,18,2022-05-06
 Data Structures,8,19,Robinetta,Easdon,2.0,verbal test,18,2022-12-05
 Data Structures,8,20,Rockwell,Chipps,4.0,written test,12,2022-06-22
+Data Structures,8,22,Sarah,Wonky,2.5,written test,12,2022-08-17
 Lists,9,1,Carmine,Voisey,1.6666666666666667,verbal test,19,2022-07-09
 Lists,9,2,Marten,Dreossi,2.0,verbal test,19,2022-12-23
-Lists,9,3,Brig,Chadwick,1.0,verbal test,19,2022-09-12
+Lists,9,3,Brig,Chad,1.0,verbal test,19,2022-09-12
 Lists,9,4,Arluene,Lande,1.0,verbal test,19,2022-08-18
 Lists,9,5,Susan,Roy,0.5,verbal test,19,2022-11-25
 Lists,9,6,Babb,Blaske,3.0,verbal test,19,2023-01-03
 Lists,9,8,Neilla,Waine,2.75,verbal test,19,2022-07-01
 Lists,9,10,Mariya,Domnick,4.0,verbal test,19,2022-05-22
 Lists,9,11,Lina,Fishleigh,1.5,verbal test,19,2023-01-25
-Lists,9,13,Jolie,Drillot,3.5,verbal test,19,2022-06-07
+Lists,9,13,Jolie,Drillot,3.6666666666666665,verbal test,19,2022-06-07
 Lists,9,14,Janith,Ashfull,4.0,written test,13,2022-10-13
 Lists,9,15,Don,Bulloch,1.0,written test,13,2022-07-10
 Lists,9,16,Murielle,Balchen,1.0,written test,13,2023-01-23
 Lists,9,17,Daisi,Klimshuk,0.0,verbal test,19,2022-08-29
 Lists,9,18,Corney,Romanetti,3.0,verbal test,19,2022-10-04
 Lists,9,19,Robinetta,Easdon,3.0,written test,13,2022-12-05
+Lists,9,21,Ammon,Roy,3.5,verbal test,19,2023-01-11
 Dictionaries,10,1,Carmine,Voisey,2.6666666666666665,verbal test,20,2022-10-24
-Dictionaries,10,3,Brig,Chadwick,1.0,written test,17,2022-11-27
+Dictionaries,10,3,Brig,Chad,1.0,written test,17,2022-11-27
 Dictionaries,10,4,Arluene,Lande,2.0,verbal test,20,2022-10-26
 Dictionaries,10,5,Susan,Roy,4.0,verbal test,20,2023-03-01
 Dictionaries,10,6,Babb,Blaske,0.0,written test,17,2022-05-21
@@ -151,9 +162,10 @@ Dictionaries,10,12,Oran,Ferguson,1.0,verbal test,20,2023-02-02
 Dictionaries,10,14,Janith,Ashfull,4.0,written test,17,2022-12-08
 Dictionaries,10,18,Corney,Romanetti,3.5,verbal test,20,2023-04-02
 Dictionaries,10,20,Rockwell,Chipps,2.0,verbal test,20,2022-06-01
+Dictionaries,10,23,John,Ipson,2.0,verbal test,20,2022-10-05
 Working with Files,11,1,Carmine,Voisey,4.0,verbal test,25,2022-05-18
 Working with Files,11,2,Marten,Dreossi,3.5,verbal test,25,2022-05-15
-Working with Files,11,3,Brig,Chadwick,2.3333333333333335,verbal test,25,2023-02-14
+Working with Files,11,3,Brig,Chad,2.3333333333333335,verbal test,25,2023-02-14
 Working with Files,11,5,Susan,Roy,1.0,verbal test,25,2022-07-26
 Working with Files,11,7,Kaspar,Elby,2.4,verbal test,25,2022-11-25
 Working with Files,11,8,Neilla,Waine,2.0,written test,21,2022-11-03
@@ -167,9 +179,10 @@ Working with Files,11,16,Murielle,Balchen,4.0,verbal test,25,2022-07-24
 Working with Files,11,17,Daisi,Klimshuk,1.0,verbal test,25,2022-07-03
 Working with Files,11,19,Robinetta,Easdon,2.0,written test,21,2022-09-05
 Working with Files,11,20,Rockwell,Chipps,2.5,verbal test,25,2022-11-25
+Working with Files,11,21,Ammon,Roy,2.0,verbal test,25,2022-11-11
 Exception Handling,12,1,Carmine,Voisey,4.0,verbal test,26,2022-06-15
 Exception Handling,12,2,Marten,Dreossi,2.0,verbal test,26,2022-12-22
-Exception Handling,12,3,Brig,Chadwick,0.0,verbal test,26,2023-01-08
+Exception Handling,12,3,Brig,Chad,0.0,verbal test,26,2023-01-08
 Exception Handling,12,4,Arluene,Lande,0.8,verbal test,26,2022-11-28
 Exception Handling,12,5,Susan,Roy,0.6666666666666666,verbal test,26,2022-07-02
 Exception Handling,12,6,Babb,Blaske,4.0,written test,22,2022-05-13
@@ -182,12 +195,14 @@ Exception Handling,12,13,Jolie,Drillot,3.0,verbal test,26,2023-01-20
 Exception Handling,12,14,Janith,Ashfull,1.3333333333333333,verbal test,26,2022-12-16
 Exception Handling,12,15,Don,Bulloch,0.0,written test,22,2022-12-06
 Exception Handling,12,16,Murielle,Balchen,2.0,verbal test,26,2022-09-05
-Exception Handling,12,17,Daisi,Klimshuk,2.0,verbal test,26,2023-02-16
+Exception Handling,12,17,Daisi,Klimshuk,2.6666666666666665,verbal test,26,2023-02-16
 Exception Handling,12,18,Corney,Romanetti,1.0,written test,22,2023-02-07
 Exception Handling,12,20,Rockwell,Chipps,2.0,verbal test,26,2022-05-26
+Exception Handling,12,21,Ammon,Roy,0.0,written test,22,2023-03-10
+Exception Handling,12,23,John,Ipson,4.0,written test,22,2023-01-19
 Quality Assurance (QA),13,1,Carmine,Voisey,1.0,verbal test,27,2023-01-19
 Quality Assurance (QA),13,2,Marten,Dreossi,3.0,verbal test,27,2023-01-13
-Quality Assurance (QA),13,3,Brig,Chadwick,2.0,written test,23,2023-03-17
+Quality Assurance (QA),13,3,Brig,Chad,2.0,written test,23,2023-03-17
 Quality Assurance (QA),13,4,Arluene,Lande,1.2,verbal test,27,2022-12-25
 Quality Assurance (QA),13,5,Susan,Roy,1.6666666666666667,written test,23,2023-01-30
 Quality Assurance (QA),13,6,Babb,Blaske,1.0,verbal test,27,2023-01-09
@@ -205,9 +220,11 @@ Quality Assurance (QA),13,17,Daisi,Klimshuk,2.0,verbal test,27,2023-01-28
 Quality Assurance (QA),13,18,Corney,Romanetti,3.0,verbal test,27,2023-01-05
 Quality Assurance (QA),13,19,Robinetta,Easdon,1.0,written test,23,2023-02-21
 Quality Assurance (QA),13,20,Rockwell,Chipps,2.25,verbal test,27,2023-01-31
+Quality Assurance (QA),13,21,Ammon,Roy,1.0,written test,23,2023-02-24
+Quality Assurance (QA),13,22,Sarah,Wonky,2.0,verbal test,27,2023-01-14
 Object-Oriented Programming,14,1,Carmine,Voisey,2.5,verbal test,28,2023-01-30
 Object-Oriented Programming,14,2,Marten,Dreossi,4.0,verbal test,28,2022-05-16
-Object-Oriented Programming,14,3,Brig,Chadwick,2.0,written test,24,2022-12-18
+Object-Oriented Programming,14,3,Brig,Chad,2.0,written test,24,2022-12-18
 Object-Oriented Programming,14,5,Susan,Roy,3.0,verbal test,28,2022-06-22
 Object-Oriented Programming,14,6,Babb,Blaske,2.0,verbal test,28,2022-06-09
 Object-Oriented Programming,14,7,Kaspar,Elby,0.0,verbal test,28,2022-08-19
@@ -221,10 +238,11 @@ Object-Oriented Programming,14,14,Janith,Ashfull,1.6666666666666667,verbal test,
 Object-Oriented Programming,14,17,Daisi,Klimshuk,2.0,verbal test,28,2022-09-16
 Object-Oriented Programming,14,18,Corney,Romanetti,1.25,verbal test,28,2023-02-10
 Object-Oriented Programming,14,19,Robinetta,Easdon,2.0,verbal test,28,2023-03-15
+Object-Oriented Programming,14,23,John,Ipson,2.0,written test,24,2022-07-22
 Recursion,15,1,Carmine,Voisey,1.0,written test,31,2023-03-03
 Recursion,15,2,Marten,Dreossi,2.5,verbal test,29,2022-05-02
-Recursion,15,3,Brig,Chadwick,3.0,verbal test,29,2023-03-03
-Recursion,15,5,Susan,Roy,3.5,verbal test,29,2022-12-18
+Recursion,15,3,Brig,Chad,3.0,verbal test,29,2023-03-03
+Recursion,15,5,Susan,Roy,2.3333333333333335,verbal test,29,2022-12-18
 Recursion,15,6,Babb,Blaske,1.0,written test,31,2022-05-10
 Recursion,15,8,Neilla,Waine,1.0,verbal test,29,2022-04-15
 Recursion,15,9,Lonnie,Cesconi,3.0,written test,31,2022-06-24
@@ -238,11 +256,13 @@ Recursion,15,16,Murielle,Balchen,2.3333333333333335,verbal test,29,2022-04-23
 Recursion,15,17,Daisi,Klimshuk,2.0,written test,31,2022-08-13
 Recursion,15,19,Robinetta,Easdon,3.5,verbal test,29,2023-03-08
 Recursion,15,20,Rockwell,Chipps,3.0,verbal test,29,2022-04-11
+Recursion,15,21,Ammon,Roy,0.0,written test,31,2023-02-24
+Recursion,15,23,John,Ipson,0.0,verbal test,29,2022-11-23
 Databases,16,2,Marten,Dreossi,4.0,verbal test,30,2022-11-03
-Databases,16,3,Brig,Chadwick,4.0,written test,32,2022-05-13
+Databases,16,3,Brig,Chad,4.0,written test,32,2022-05-13
 Databases,16,4,Arluene,Lande,1.0,verbal test,30,2022-10-18
 Databases,16,5,Susan,Roy,3.0,verbal test,30,2023-02-18
-Databases,16,6,Babb,Blaske,2.0,verbal test,30,2022-09-18
+Databases,16,6,Babb,Blaske,1.6666666666666667,verbal test,30,2022-09-18
 Databases,16,7,Kaspar,Elby,3.5,written test,32,2023-02-15
 Databases,16,9,Lonnie,Cesconi,2.0,verbal test,30,2023-01-08
 Databases,16,10,Mariya,Domnick,0.0,verbal test,30,2023-02-23
@@ -255,5 +275,11 @@ Databases,16,17,Daisi,Klimshuk,3.5,verbal test,30,2022-12-04
 Databases,16,18,Corney,Romanetti,1.0,verbal test,30,2022-10-11
 Databases,16,19,Robinetta,Easdon,1.5,verbal test,30,2022-10-13
 Databases,16,20,Rockwell,Chipps,2.5,written test,32,2022-12-14
+Databases,16,21,Ammon,Roy,0.0,written test,32,2022-11-05
+Databases,16,22,Sarah,Wonky,1.0,verbal test,30,2022-07-27
+Databases,16,23,John,Ipson,4.0,verbal test,30,2023-01-23
 Tuples,17,5,Susan,Roy,3.0,verbal and written test,33,2023-04-12
 Tuples,17,11,Lina,Fishleigh,4.0,verbal and written test,33,2023-03-30
+Tuples,17,21,Ammon,Roy,4.0,verbal and written test,33,2022-09-04
+Tables and SQL,18,17,Daisi,Klimshuk,2.0,verbal and written test,34,2023-04-01
+Tables and SQL,18,21,Ammon,Roy,4.0,verbal and written test,34,2023-01-31

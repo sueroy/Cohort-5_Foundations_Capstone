@@ -1,0 +1,18 @@
+"filename", "language", "JSON", "Python", "CSV", "toml", "Markdown", "SQL", "comment", "blank", "total"
+"/Users/Sue/dp/assignments/Capstone/Classes.py", "Python", 0, 286, 0, 0, 0, 0, 5, 63, 354
+"/Users/Sue/dp/assignments/Capstone/Pipfile", "toml", 0, 0, 0, 9, 0, 0, 0, 4, 13
+"/Users/Sue/dp/assignments/Capstone/Pipfile.lock", "JSON", 48, 0, 0, 0, 0, 0, 0, 1, 49
+"/Users/Sue/dp/assignments/Capstone/all_user_results.csv", "CSV", 0, 0, 259, 0, 0, 0, 0, 1, 260
+"/Users/Sue/dp/assignments/Capstone/capstone_assessment_name_data.csv", "CSV", 0, 0, 33, 0, 0, 0, 0, 1, 34
+"/Users/Sue/dp/assignments/Capstone/capstone_comp_cat_data.csv", "CSV", 0, 0, 17, 0, 0, 0, 0, 1, 18
+"/Users/Sue/dp/assignments/Capstone/capstone_results_data.csv", "CSV", 0, 0, 501, 0, 0, 0, 0, 1, 502
+"/Users/Sue/dp/assignments/Capstone/capstone_tables1.db", "SQL", 0, 0, 0, 0, 0, 320, 0, 5, 325
+"/Users/Sue/dp/assignments/Capstone/capstone_user_data.csv", "CSV", 0, 0, 21, 0, 0, 0, 0, 1, 22
+"/Users/Sue/dp/assignments/Capstone/class TestUser:.py", "Python", 0, 4, 0, 0, 0, 0, 0, 2, 6
+"/Users/Sue/dp/assignments/Capstone/main.py", "Python", 0, 270, 0, 0, 0, 0, 12, 68, 350
+"/Users/Sue/dp/assignments/Capstone/readme.md", "Markdown", 0, 0, 0, 0, 42, 0, 0, 37, 79
+"/Users/Sue/dp/assignments/Capstone/results_import.csv", "CSV", 0, 0, 6, 0, 0, 0, 0, 1, 7
+"/Users/Sue/dp/assignments/Capstone/schema.sql", "SQL", 0, 0, 0, 0, 0, 40, 0, 3, 43
+"/Users/Sue/dp/assignments/Capstone/setup_main.py", "Python", 0, 16, 0, 0, 0, 0, 49, 26, 91
+"/Users/Sue/dp/assignments/Capstone/user_competency.csv", "CSV", 0, 0, 15, 0, 0, 0, 0, 1, 16
+"Total", "-", 48, 576, 852, 9, 42, 360, 66, 216, 2169

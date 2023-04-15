@@ -80,11 +80,12 @@ class Users:
         WHERE rca.user_id = ? 
         AND  cc.category_id = cad.category_id
         AND cad.assessment_id = rca.assessment_id
+        ORDER BY rca.date_taken DESC
         '''
         rows = cursor.execute(query, (self.user_id,))
-        print(f'\n{"COMPETENCY":30}{"ASSESSMENT NAME":20}{"RESULT ID":^10}{"SCORE":^7}{"DATE TAKEN":^12}')
+        print(f'\n{"COMPETENCY":30}{"ASSESSMENT NAME":30}{"RESULT ID":^10}{"SCORE":^7}{"DATE TAKEN":^12}')
         for row in rows:
-            print(f'{row[0]:30}{row[1]:20}{row[2]:^10}{row[3]:^7}{row[4]:^12}')
+            print(f'{row[0]:30}{row[1]:30}{row[2]:^10}{row[3]:^7}{row[4]:^12}')
         
 
 class Manager(Users):
@@ -97,6 +98,13 @@ class Manager(Users):
         for row in rows:
             print(f'{row[0]:^5}{row[1]:25}{row[2]:25}{row[3]:30}{row[4]:^6}')
 
+    def view_managers(self):
+        rows = cursor.execute("SELECT user_id, first_name, last_name FROM Users WHERE user_type = 1").fetchall()
+
+        print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}')
+    
+        for row in rows:
+            print(f'{row[0]:^5}{row[1]:25}{row[2]:25}')
     
     def user_search(self):
         user_input = input('\nPlease enter a First name or a Last name:\n\n')
@@ -108,7 +116,7 @@ class Manager(Users):
             for row in row_names:
                 print(f'{row[0]:^5}{row[1]:20}{row[2]:20}{row[4]}')
 
-            edit_user = input('\nPlease enter the User ID you wish to view:')
+            edit_user = input('\nPlease enter the User ID you wish to view: ')
             row = cursor.execute("SELECT * FROM users WHERE user_id = ?",(edit_user,)).fetchone()
             
             user_id = row[0]
@@ -122,9 +130,9 @@ class Manager(Users):
             hire_date = row[8]
             user_type = row[9]
 
-            print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}{"PHONE":15}{"EMAIL":20}{"DATE CREATED":15}{"HIRE DATE"}')
+            print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}{"PHONE":15}{"EMAIL":30}{"DATE CREATED":15}{"HIRE DATE"}')
         
-            print(f'{str(row[0]):^5}{str(row[1]):25}{str(row[2]):25}{str(row[3]):15}{str(row[4]):20}{str(row[7]):15}{str(row[8])}')
+            print(f'{str(row[0]):^5}{str(row[1]):25}{str(row[2]):25}{str(row[3]):15}{str(row[4]):30}{str(row[7]):15}{str(row[8])}')
 
             user = Users(user_id,first_name,last_name,phone,email,password,active,date_created,hire_date,user_type)
             return user
@@ -142,24 +150,24 @@ class Manager(Users):
         ORDER BY u.user_id
         '''
         rows = cursor.execute(query).fetchall()
-        print(f'\n{"COMPETENCY NAME":30}{"COMPETENCY ID":^15}{"USER ID":^7}{"FIRST NAME":20}{"LAST NAME":20}{"AVERAGE SCORE":^15}{"ASSESSMENT NAME":30}{"DATE TAKEN"}')
+        print(f'\n{"COMPETENCY NAME":30}{"COMPETENCY ID":^15}{"USER ID":^7}{"FIRST NAME":20}{"LAST NAME":20}{"AVERAGE SCORE":^15}{"LAST DATE TAKEN"}')
         for row in rows:
-            print(f'{row[0]:30}{row[1]:^15}{row[2]:^7}{row[3]:20}{row[4]:20}{row[5]:^15.2f}{row[6]:30}{row[7]}')
+            print(f'{row[0]:30}{row[1]:^15}{row[2]:^7}{row[3]:20}{row[4]:20}{row[5]:^15.2f}{row[7]}')
 
     def view_comp_level_user(self):
         edit_user = self.user_search()
         
         query = '''
-        SELECT u.user_id, u.first_name, u.last_name, u.email, cc.cat_name, AVG(rca.score) 
+        SELECT u.user_id, u.first_name, u.last_name, u.email, cc.cat_name, cc.category_id, AVG(rca.score) 
         FROM Users u, Competency_Cat cc, Comp_Assessment_Data cad, Results_Comp_Assess rca 
         WHERE u.user_id = ? AND cc.category_id = cad.category_id AND cad.assessment_id = rca.assessment_id
         GROUP BY cc.cat_name 
         ORDER BY rca.date_taken DESC
         '''
         rows = cursor.execute(query, (edit_user.user_id,)).fetchall()
-        print(f"\n{'USER ID':^7}{'FIRST NAME':15}{'LAST NAME':15}{'EMAIL':20}{'COMPETENCY':30}{'AVERAGE SCORE':^15}")
+        print(f"\n{'USER ID':^7}{'FIRST NAME':15}{'LAST NAME':15}{'EMAIL':30}{'COMPETENCY':30}{'CATEGORY ID':^13}{'AVERAGE SCORE':^15}")
         for row in rows:
-            print(f"{row[0]:^7}{row[1]:15}{row[2]:15}{row[3]:20}{row[4]:30}{row[5]:^15.2f}")
+            print(f"{row[0]:^7}{row[1]:15}{row[2]:15}{row[3]:30}{row[4]:30}{row[5]:^13}{row[6]:^15.2f}")
 
     def view_assess_list_user(self):
         edit_user = self.user_search()
@@ -171,9 +179,9 @@ class Manager(Users):
         ORDER BY rca.date_taken DESC
         '''
         rows = cursor.execute(query, (edit_user.user_id,)).fetchall()
-        print(f"\n{'USER ID':^8}{'FIRST NAME':15}{'LAST NAME':15}{'ASSESS ID':^9}{'ASSESSMENT NAME':17}{'AVERAGE SCORE':^15}{'DATE TAKEN'}")
+        print(f"\n{'USER ID':^8}{'FIRST NAME':15}{'LAST NAME':15}{'ASSESS ID':^13}{'ASSESSMENT NAME':30}{'AVERAGE SCORE':^15}{'DATE TAKEN'}")
         for row in rows:
-            print(f"{row[0]:^8}{row[1]:15}{row[2]:15}{row[3]:^9}{row[4]:17}{row[5]:^15.2f}{row[6]}")
+            print(f"{row[0]:^8}{row[1]:15}{row[2]:15}{row[3]:^13}{row[4]:30}{row[5]:^15.2f}{row[6]}")
 
     def view_all_results_user(self):
         edit_user = self.user_search()
@@ -185,17 +193,17 @@ class Manager(Users):
         GROUP BY rca.result_id
         '''
         rows = cursor.execute(query, (edit_user.user_id,)).fetchall()
-        print(f"\n{'USER ID':^8}{'FIRST NAME':15}{'LAST NAME':15}{'ASSESSMENT NAME':17}{'RESULT ID:':^10}{'SCORE':^5}{'DATE TAKEN'}")
+        print(f"\n{'USER ID':^8}{'FIRST NAME':15}{'LAST NAME':15}{'ASSESSMENT NAME':25}{'RESULT ID:':^10}{'SCORE':^5}{'DATE TAKEN'}")
         
         for row in rows:
-            print(f"{row[0]:^8}{row[1]:15}{row[2]:15}{row[3]:17}{row[4]:^10}{row[5]:^5.2f}{row[6]}")
+            print(f"{row[0]:^8}{row[1]:15}{row[2]:15}{row[3]:25}{row[4]:^10}{row[5]:^5.2f}{row[6]}")
 
     def view_all_categories(self):
         rows = cursor.execute('SELECT * FROM Competency_Cat').fetchall()
-        print(f'\n{"CATEGORY ID":^13}{"CATEGORY NAME":^20}{"ACTIVE"}')
+        print(f'\n{"CATEGORY ID":^13}{"CATEGORY NAME":^35}{"ACTIVE"}')
 
         for row in rows:
-            print(f'{row[0]:^13}{row[1]:^20}{row[2]}')
+            print(f'{row[0]:^13}{row[1]:^35}{row[2]}')
 
     def view_all_assessments(self):
         rows = cursor.execute('SELECT * FROM Comp_Assessment_Data').fetchall()
@@ -346,8 +354,8 @@ class Manager(Users):
         query = 'UPDATE Users SET user_type = ?  WHERE user_id = ?'
         cursor.execute(query, (act_deact, act_man))
         connection.commit()
-        if act_deact == 0:
+        if act_deact == 1:
             print(f'\nUser ID: {act_man} has been set as a Manager.')
-        elif act_deact == 1:
+        elif act_deact == 0:
             print(f'\nUser ID: {act_man} has been set as a User.')
             

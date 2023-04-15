@@ -104,7 +104,7 @@ def user_menu(user_obj):
     if user_input == '6':
         user_obj.view_assess_results(user_obj.user_id)
 
-    if user_input == '7' or user_input.upper == 'Q':
+    if user_input == '7' or user_input.upper() == 'Q':
         logout()
 
 def manager_menu(man_obj):
@@ -146,6 +146,7 @@ def manager_menu(man_obj):
         2. View a Competency Report for ALL Users.
         3. View a Competency Report for an Individual User.
         4. View a List of Assessments for an Individual User.
+        ENTER to Quit
 
         >>>
         ''')
@@ -168,6 +169,7 @@ def manager_menu(man_obj):
         2: Add a NEW Competency.
         3: Add a NEW Assessment.
         4. Add a NEW Assessment Result for a User.
+        ENTER to Quit.
 
         >>>
         ''')
@@ -221,8 +223,9 @@ def manager_menu(man_obj):
             4 - Expert Competency - Can Effectively pass on this knowledge and can initiate optimizations
             
             Please enter the score (0-4): """))
-            date_taken = input("Please enter the date taken (YYYY-MM-DD): ") 
-            manager = int(input("Please enter the Manager ID: "))
+            date_taken = input("Please enter the date taken (YYYY-MM-DD): ")
+            man_obj.view_managers()
+            manager = int(input("\nPlease enter the Manager ID: "))
             man_obj.add_new_result(user_id,assess_id,score,date_taken,manager)        
    
     if user_input == '5':
@@ -235,6 +238,7 @@ def manager_menu(man_obj):
         2: EDIT a Competency.
         3: EDIT a Assessment.
         4. EDIT an Assessment Result.
+        ENTER to Quit.
 
         >>>
         ''')
@@ -275,6 +279,7 @@ def manager_menu(man_obj):
             man_obj.edit_result(result_id,score,date_taken)
 
     if user_input == '6':
+        print("\nPlease note that deletion is PERMANENT and CANNOT be reversed - please ensure the result you are deleting is the correct one.")
         man_obj.view_all_results_user()
         result_id = input('\nWhich Result ID would you like to delete: ')
         man_obj.delete_result(result_id)
@@ -289,22 +294,27 @@ def manager_menu(man_obj):
         2: Competency
         3: Assessment
         4: Manager
+        ENTER to Quit.
 
         >>>
         ''')
         if act_input == '1':
+            man_obj.view_all_users()
             act_user = int(input('\nPlease enter the User ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.user_activation(act_user,act_deact)
         if act_input == '2':
+            man_obj.view_all_categories()
             act_comp = int(input('\nPlease enter the Competency ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.comp_activation(act_comp,act_deact)
         if act_input == '3':
+            man_obj.view_all_assessments()
             act_assess = int(input('\nPlease enter the Assessment ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.assess_activation(act_assess,act_deact)
         if act_input == '4':
+            man_obj.view_all_users()
             act_man = int(input('\nPlease enter the User ID: '))
             act_deact = int(input('Please enter 1 for manager and 0 for user: '))
             man_obj.manager_activation(act_man,act_deact)
