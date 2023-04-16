@@ -6,9 +6,10 @@
 
 ##TO BEGIN:
 
-1. Run `pipenv install`
-2. Run `pipenv shell`
-3. Run `python main.py`
+1. Checkout to main branch.
+2. Run `pipenv install`
+3. Run `pipenv shell`
+4. Run `python main.py`
 
 You will see the following:
 
