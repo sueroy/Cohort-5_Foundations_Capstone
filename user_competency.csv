@@ -1,14 +1,16 @@
 User ID,First Name,Last Name,Email,Competency,Competency ID,Average Score
-17,Daisi,Klimshuk,dklimshukg@xing.com,Data Types,2,3.5
-17,Daisi,Klimshuk,dklimshukg@xing.com,Variables,3,1.5
-17,Daisi,Klimshuk,dklimshukg@xing.com,Functions,4,4.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Conditionals,6,0.5
-17,Daisi,Klimshuk,dklimshukg@xing.com,Loops (For and While),7,2.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Lists,9,0.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Working with Files,11,1.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Exception Handling,12,2.6666666666666665
-17,Daisi,Klimshuk,dklimshukg@xing.com,Quality Assurance (QA),13,2.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Object-Oriented Programming,14,2.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Recursion,15,2.0
-17,Daisi,Klimshuk,dklimshukg@xing.com,Databases,16,3.5
-17,Daisi,Klimshuk,dklimshukg@xing.com,Tables and SQL,18,2.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Computer Anatomy,1,2.6666666666666665
+10,Mariya,Domnick,mdomnick9@columbia.edu,Data Types,2,1.6666666666666667
+10,Mariya,Domnick,mdomnick9@columbia.edu,Variables,3,4.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Functions,4,2.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Boolean Logic,5,2.5
+10,Mariya,Domnick,mdomnick9@columbia.edu,Conditionals,6,3.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Loops (For and While),7,2.5
+10,Mariya,Domnick,mdomnick9@columbia.edu,Data Structures,8,3.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Lists,9,4.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Dictionaries,10,0.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Exception Handling,12,1.3333333333333333
+10,Mariya,Domnick,mdomnick9@columbia.edu,Quality Assurance (QA),13,1.6666666666666667
+10,Mariya,Domnick,mdomnick9@columbia.edu,Object-Oriented Programming,14,3.0
+10,Mariya,Domnick,mdomnick9@columbia.edu,Recursion,15,2.3333333333333335
+10,Mariya,Domnick,mdomnick9@columbia.edu,Databases,16,0.0

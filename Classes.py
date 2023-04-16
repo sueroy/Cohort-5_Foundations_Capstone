@@ -29,14 +29,7 @@ class Users:
         print(f"Date Created: {self.date_created}")
         print(f"Hire Date: {self.hire_date}")
         print(f"User Type: {self.user_type}\n")
-        # query = "SELECT user_id, first_name, last_name, email, phone, date_created, hire_date FROM Users WHERE email = ?"
-        # row = cursor.execute(query,(email,))
-        # 
         
-        # print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}{"EMAIL":30}{"PHONE":15}{"DATE CREATED":15}{"HIRE DATE"}')
-    
-        # print(f'{str(user_info_list[0]):^5}{str(user_info_list[1]):25}{str(user_info_list[2]):25}{str(user_info_list[3]):30}{str(user_info_list[4]):15}{str(user_info_list[5]):15}{str(user_info_list[6])}')
-
     def change_password(self, password):
         self.password = password
         query = 'UPDATE Users SET password = ? WHERE user_id = ?'
@@ -368,28 +361,4 @@ class Manager(Users):
         elif act_deact == 0:
             print(f'\nUser ID: {act_man} has been set as a User.')
             
-    def pdf_conv_user_comp():
-
-        data = []
-        with open('user_competency.csv', 'r') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                data.append(row)
-
-        pdf = FPDF()
-        pdf.add_page(orientation='L')
-
-        pdf.set_font("Arial", size=12)
-        col_widths = [20,35,35,50,60,30,45]
     
-        for row in data:
-            pdf.cell(col_widths[0], 10, row[0], align='C',border=1)
-            pdf.cell(col_widths[1], 10, row[1], align='C',border=1)
-            pdf.cell(col_widths[2], 10, row[2], align='C',border=1)
-            pdf.cell(col_widths[3], 10, row[3], align='C',border=1)
-            pdf.cell(col_widths[4], 10, row[4], align='C',border=1)
-            pdf.cell(col_widths[5], 10, row[5], align='C',border=1)
-            pdf.cell(col_widths[6], 10, row[6], align='C',border=1)
-            pdf.ln()
-
-        pdf.output("user_comp.pdf")

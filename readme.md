@@ -17,12 +17,14 @@ You will see the following:
 ###Login Credentials:
 
 User:
-Email: sarah@email.com
-Password: 12341234
+Email: sarah@devpipeline.com
+Password: 1234
 
 Manager:
-Email: ammon@email.com
-Password: manager
+Email: brig@email.com
+Password: password
+
+For testing purposes you can change these emails and passwords.
 
 ###The User Menu:
 
@@ -34,7 +36,7 @@ There are no sub menus in this menu.
 
 ###The Manager Menu:
 
-![Screenshot 2023-04-14 at 9 50 17 AM](https://user-images.githubusercontent.com/129418643/232092978-d999acfa-3bff-45a8-8c17-3c99726ddc0c.png)
+![Screenshot 2023-04-15 at 6 46 31 PM](https://user-images.githubusercontent.com/129418643/232260277-beac8992-9e18-4fab-ba43-435bf2b08541.png)
 
 1: User Menu will take you to the User Menu referenced above.
 
@@ -69,10 +71,12 @@ This menu will allow to "turn on" and "turn off" a User, Competency, Assessment,
 
 8: This will allow you to export a CSV file of an individual's Competency Scores.
 
-9: This will allow you to export a CSV file of ALL Users' Competency Scores.
+9: This will allow you to export a PDF file of an individual's Competency Scores.
 
-10. This will allow you to import a CSV file of Result Scores and will update the Results database table to include those results.
+10: This will allow you to export a CSV file of ALL Users' Competency Scores.
 
-11. Quit 
+11: This will allow you to import a CSV file of Result Scores and will update the Results database table to include those results. (For testing purposes the current CSV file has new data that you can import into the database.)
+
+12: Quit 
 
 Thank You! Have a Magical Day!
