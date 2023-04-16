@@ -3,6 +3,9 @@ from Classes import Users, Manager
 import bcrypt
 import csv
 from datetime import datetime
+from fpdf import FPDF
+
+from pdfconversion import pdf_conv_user_comp
 
 connection = sqlite3.connect('capstone_tables1.db')
 cursor = connection.cursor()
@@ -13,7 +16,7 @@ def login():
     password = input('\nPlease enter your password:')
 
     query = f'SELECT * FROM Users WHERE email = ?'
-    user_info = cursor.execute(query, (email,)).fetchone() # Returns single Tuple (user_id, first, last, etc....)
+    user_info = cursor.execute(query, (email,)).fetchone() 
 
     user_info_list = []
     for item in user_info:
@@ -30,15 +33,9 @@ def login():
     hire_date = user_info_list[8]
     user_type = user_info_list[9]
 
-    # bytes = user_info_list[5].encode('utf-8')
-    # salt = bcrypt.gensalt()
-    # hash = bcrypt.hashpw(bytes,salt)
-
-
     userbytes = password.encode('utf-8')
     result = bcrypt.checkpw(userbytes,db_password)
     
-
     if result:
         if user_type == 0:
             return Users(user_id,first_name,last_name,phone,email,db_password,active,date_created,hire_date,user_type)
@@ -131,12 +128,9 @@ def manager_menu(man_obj):
     if user_input == '1':
         user_menu(man_obj)
         
-
     if user_input == '2':
         user = man_obj.user_search()
-        # if user:
-        #     user.view_user()
-
+        
     if user_input == '3':
         user_input1 = input('''
         \n*** VIEW MENU***
@@ -153,10 +147,13 @@ def manager_menu(man_obj):
         ''')
         if user_input1 == '1':
             man_obj.view_all_users()
+
         if user_input1 == '2':
             man_obj.view_comp_all_users()
+
         if user_input1 == '3':
             man_obj.view_comp_level_user()
+
         if user_input1 == '4':
             man_obj.view_assess_list_user()
 
@@ -304,16 +301,19 @@ def manager_menu(man_obj):
             act_user = int(input('\nPlease enter the User ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.user_activation(act_user,act_deact)
+
         if act_input == '2':
             man_obj.view_all_categories()
             act_comp = int(input('\nPlease enter the Competency ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.comp_activation(act_comp,act_deact)
+
         if act_input == '3':
             man_obj.view_all_assessments()
             act_assess = int(input('\nPlease enter the Assessment ID: '))
             act_deact = int(input('Please enter 1 for active and 0 for inactive: '))
             man_obj.assess_activation(act_assess,act_deact)
+
         if act_input == '4':
             man_obj.view_all_users()
             act_man = int(input('\nPlease enter the User ID: '))
@@ -326,10 +326,10 @@ def manager_menu(man_obj):
         man_obj.export_csv_user_comp(user_obj)
 
     if user_input == '9':
-        print('\nPlease search for the User you would like to export the User Competency Report for.\n')
+        print('\nPlease search for the User you would like to export the PDF User Competency Report for.\n')
         user_obj = man_obj.user_search()
         man_obj.export_csv_user_comp(user_obj)
-        man_obj.pdf_conv_user_comp()
+        pdf_conv_user_comp()
 
     if user_input == '10':
         man_obj.export_csv_alluser_results()

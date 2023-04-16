@@ -1,0 +1,46 @@
+Date : 2023-04-15 18:56:59
+Directory : /Users/Sue/dp/assignments/Capstone
+Total : 17 files,  2151 codes, 66 comments, 233 blanks, all 2450 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| CSV      |          7 |        892 |          0 |          7 |        899 |
+| Python   |          5 |        651 |         66 |        173 |        890 |
+| SQL      |          2 |        390 |          0 |          9 |        399 |
+| JSON     |          1 |        162 |          0 |          1 |        163 |
+| Markdown |          1 |         44 |          0 |         39 |         83 |
+| toml     |          1 |         12 |          0 |          4 |         16 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                 | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                    |         17 |      2,151 |         66 |        233 |      2,450 |
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                             | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/Sue/dp/assignments/Capstone/Classes.py                        | Python   |        320 |          5 |         70 |        395 |
+| /Users/Sue/dp/assignments/Capstone/Pipfile                           | toml     |         12 |          0 |          4 |         16 |
+| /Users/Sue/dp/assignments/Capstone/Pipfile.lock                      | JSON     |        162 |          0 |          1 |        163 |
+| /Users/Sue/dp/assignments/Capstone/all_user_results.csv              | CSV      |        285 |          0 |          1 |        286 |
+| /Users/Sue/dp/assignments/Capstone/capstone_assessment_name_data.csv | CSV      |         33 |          0 |          1 |         34 |
+| /Users/Sue/dp/assignments/Capstone/capstone_comp_cat_data.csv        | CSV      |         17 |          0 |          1 |         18 |
+| /Users/Sue/dp/assignments/Capstone/capstone_results_data.csv         | CSV      |        501 |          0 |          1 |        502 |
+| /Users/Sue/dp/assignments/Capstone/capstone_tables1.db               | SQL      |        350 |          0 |          6 |        356 |
+| /Users/Sue/dp/assignments/Capstone/capstone_user_data.csv            | CSV      |         21 |          0 |          1 |         22 |
+| /Users/Sue/dp/assignments/Capstone/class TestUser:.py                | Python   |          4 |          0 |          2 |          6 |
+| /Users/Sue/dp/assignments/Capstone/main.py                           | Python   |        286 |         12 |         69 |        367 |
+| /Users/Sue/dp/assignments/Capstone/pdfconversion.py                  | Python   |         25 |          0 |          6 |         31 |
+| /Users/Sue/dp/assignments/Capstone/readme.md                         | Markdown |         44 |          0 |         39 |         83 |
+| /Users/Sue/dp/assignments/Capstone/results_import.csv                | CSV      |         21 |          0 |          1 |         22 |
+| /Users/Sue/dp/assignments/Capstone/schema.sql                        | SQL      |         40 |          0 |          3 |         43 |
+| /Users/Sue/dp/assignments/Capstone/setup_main.py                     | Python   |         16 |         49 |         26 |         91 |
+| /Users/Sue/dp/assignments/Capstone/user_competency.csv               | CSV      |         14 |          0 |          1 |         15 |
+| Total                                                                |          |      2,151 |         66 |        233 |      2,450 |
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
