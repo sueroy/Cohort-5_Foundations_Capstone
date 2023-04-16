@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import datetime
 import csv
+from fpdf import FPDF
 
 connection = sqlite3.connect('capstone_tables1.db')
 cursor = connection.cursor()
@@ -117,25 +118,33 @@ class Manager(Users):
                 print(f'{row[0]:^5}{row[1]:20}{row[2]:20}{row[4]}')
 
             edit_user = input('\nPlease enter the User ID you wish to view: ')
-            row = cursor.execute("SELECT * FROM users WHERE user_id = ?",(edit_user,)).fetchone()
-            
-            user_id = row[0]
-            first_name = row[1]
-            last_name = row[2]
-            phone = row[3]
-            email = row[4]
-            password = row[5]
-            active = row[6]
-            date_created = row[7]
-            hire_date = row[8]
-            user_type = row[9]
-
-            print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}{"PHONE":15}{"EMAIL":30}{"DATE CREATED":15}{"HIRE DATE"}')
         
-            print(f'{str(row[0]):^5}{str(row[1]):25}{str(row[2]):25}{str(row[3]):15}{str(row[4]):30}{str(row[7]):15}{str(row[8])}')
+            if user_input != '': 
+                row = cursor.execute("SELECT * FROM users WHERE user_id = ?",(edit_user,)).fetchone()
+                if row is None:
+                    print("Invalid input, please try again.")
+                    return None
+            
+                user_id = row[0]
+                first_name = row[1]
+                last_name = row[2]
+                phone = row[3]
+                email = row[4]
+                password = row[5]
+                active = row[6]
+                date_created = row[7]
+                hire_date = row[8]
+                user_type = row[9]
 
-            user = Users(user_id,first_name,last_name,phone,email,password,active,date_created,hire_date,user_type)
-            return user
+                print(f'\n{"ID":^5}{"FIRST NAME":25}{"LAST NAME":25}{"PHONE":15}{"EMAIL":30}{"DATE CREATED":15}{"HIRE DATE"}')
+            
+                print(f'{str(row[0]):^5}{str(row[1]):25}{str(row[2]):25}{str(row[3]):15}{str(row[4]):30}{str(row[7]):15}{str(row[8])}')
+
+                user = Users(user_id,first_name,last_name,phone,email,password,active,date_created,hire_date,user_type)
+                return user
+            else:
+                edit_user == ""
+                print("Invalid input, please try again.")
         
         else:
             input("\nNo Matching Results. Press enter to continue.")
@@ -359,3 +368,28 @@ class Manager(Users):
         elif act_deact == 0:
             print(f'\nUser ID: {act_man} has been set as a User.')
             
+    def pdf_conv_user_comp():
+
+        data = []
+        with open('user_competency.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                data.append(row)
+
+        pdf = FPDF()
+        pdf.add_page(orientation='L')
+
+        pdf.set_font("Arial", size=12)
+        col_widths = [20,35,35,50,60,30,45]
+    
+        for row in data:
+            pdf.cell(col_widths[0], 10, row[0], align='C',border=1)
+            pdf.cell(col_widths[1], 10, row[1], align='C',border=1)
+            pdf.cell(col_widths[2], 10, row[2], align='C',border=1)
+            pdf.cell(col_widths[3], 10, row[3], align='C',border=1)
+            pdf.cell(col_widths[4], 10, row[4], align='C',border=1)
+            pdf.cell(col_widths[5], 10, row[5], align='C',border=1)
+            pdf.cell(col_widths[6], 10, row[6], align='C',border=1)
+            pdf.ln()
+
+        pdf.output("user_comp.pdf")

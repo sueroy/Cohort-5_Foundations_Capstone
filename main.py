@@ -120,10 +120,11 @@ def manager_menu(man_obj):
     5:  EDIT.
     6:  DELETE an Assessment Result.
     7:  ACTIVATION/DEACTIVATION.
-    8:  EXPORT User Competency Report.
-    9:  EXPORT All Competencies for All Users Report.
-    10: IMPORT Assessment Results.
-    11: Quit (Q)
+    8:  EXPORT CSV User Competency Report.
+    9:  EXPORT PDF User Competency Report.
+    10: EXPORT CSV All Competencies for All Users Report.
+    11: IMPORT Assessment Results.
+    12: Quit (Q)
     
     >>>''')
 
@@ -325,12 +326,18 @@ def manager_menu(man_obj):
         man_obj.export_csv_user_comp(user_obj)
 
     if user_input == '9':
-        man_obj.export_csv_alluser_results()
+        print('\nPlease search for the User you would like to export the User Competency Report for.\n')
+        user_obj = man_obj.user_search()
+        man_obj.export_csv_user_comp(user_obj)
+        man_obj.pdf_conv_user_comp()
 
     if user_input == '10':
+        man_obj.export_csv_alluser_results()
+
+    if user_input == '11':
         man_obj.import_csv_assess_results()
 
-    if user_input == '11' or user_input.upper() == 'Q':
+    if user_input == '12' or user_input.upper() == 'Q':
         logout()
 
 
