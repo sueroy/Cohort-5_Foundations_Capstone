@@ -37,6 +37,9 @@ def login():
     result = bcrypt.checkpw(userbytes,db_password)
     
     if result:
+        if active == 0:
+            print("\nThis user is inactive and cannot log in. Please contact the manager.")
+            exit()
         if user_type == 0:
             return Users(user_id,first_name,last_name,phone,email,db_password,active,date_created,hire_date,user_type)
         else:
